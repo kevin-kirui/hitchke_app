@@ -1,33 +1,46 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset default browser styles */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #3dda0d;
 }
 
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #3dda0d;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header and footer styles */
 header, footer {
     background-color: #333;
-    color: rgb(240, 211, 47);
+    color: #f0d32f;
     text-align: center;
     padding: 1em 0;
 }
 
+/* Main content styles */
 main {
     padding: 1em;
 }
 
+/* Heading styles */
 h1, h2 {
     margin: 0;
     padding-bottom: 0.5em;
 }
 
+/* Section styles */
 #ride-form, #rides-list {
-    background: rgb(138, 236, 10);
+    background-color: #8aec0a;
     padding: 1em;
     margin-bottom: 1em;
     border-radius: 5px;
 }
 
+/* Form styles */
 label {
     display: block;
     margin: 0.5em 0 0.2em;
@@ -39,10 +52,11 @@ input[type="text"], input[type="datetime-local"] {
     margin-bottom: 1em;
 }
 
+/* Button styles */
 button {
     padding: 0.5em 1em;
     background-color: #333;
-    color: rgb(90, 37, 216);
+    color: #5a25d8;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -52,14 +66,67 @@ button:hover {
     background-color: #73df1a;
 }
 
+/* Rides list styles */
 #rides {
     list-style-type: none;
     padding: 0;
 }
 
 #rides li {
-    background: #124bb4;
+    background-color: #124bb4;
     margin-bottom: 0.5em;
     padding: 0.5em;
     border-radius: 5px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin-top: 1em;
+}
+
+.slides {
+    display: none;
+}
+
+/* Slide navigation buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Dot indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
 }
